@@ -27,7 +27,7 @@ export type PropsCreateSub = {
   billingType: "BOLETO" | "CREDIT_CARD" | "PIX" | "UNDEFINED";
 
   value: number;
-  nextDueDate: string;
+  nextDueDate: Date;
 
   cycle:
     | "WEEKLY"
@@ -40,7 +40,7 @@ export type PropsCreateSub = {
   description?: string;
   externalReference?: string;
 
-  endDate?: string;
+  endDate?: Date;
   maxPayments?: number;
 
   discount?: {
@@ -72,7 +72,7 @@ export type PropsCreateCreditCardSub = {
   billingType: "CREDIT_CARD";
 
   value: number;
-  nextDueDate: string;
+  nextDueDate: Date;
 
   cycle:
     | "WEEKLY"
@@ -85,7 +85,7 @@ export type PropsCreateCreditCardSub = {
   description?: string;
   externalReference?: string;
 
-  endDate?: string;
+  endDate?: Date;
   maxPayments?: number;
 
   creditCard: {
@@ -162,11 +162,7 @@ export type PropsPayment = {
   interestValue?: number;
   description?: string;
 
-  billingType:
-    | "BOLETO"
-    | "CREDIT_CARD"
-    | "PIX"
-    | "UNDEFINED";
+  billingType: "BOLETO" | "CREDIT_CARD" | "PIX" | "UNDEFINED";
 
   status:
     | "PENDING"

@@ -24,11 +24,11 @@ export type PropsCreateSub = {
     customer: string;
     billingType: "BOLETO" | "CREDIT_CARD" | "PIX" | "UNDEFINED";
     value: number;
-    nextDueDate: string;
+    nextDueDate: Date;
     cycle: "WEEKLY" | "BIWEEKLY" | "MONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "YEARLY";
     description?: string;
     externalReference?: string;
-    endDate?: string;
+    endDate?: Date;
     maxPayments?: number;
     discount?: {
         value?: number;
@@ -52,11 +52,11 @@ export type PropsCreateCreditCardSub = {
     customer: string;
     billingType: "CREDIT_CARD";
     value: number;
-    nextDueDate: string;
+    nextDueDate: Date;
     cycle: "WEEKLY" | "BIWEEKLY" | "MONTHLY" | "QUARTERLY" | "SEMIANNUALLY" | "YEARLY";
     description?: string;
     externalReference?: string;
-    endDate?: string;
+    endDate?: Date;
     maxPayments?: number;
     creditCard: {
         holderName: string;
